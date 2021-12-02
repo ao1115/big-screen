@@ -55,7 +55,10 @@ export const Chart1 = () => {
         });
     }, []);
     return (
-        <div className="chart" ref={divRef}>
+        <div className="管辖统计 borderd">
+            <h2>案发派出所管辖统计</h2>
+            <div className="chart" ref={divRef}>
+            </div>
         </div>
     )
 

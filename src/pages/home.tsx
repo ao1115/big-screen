@@ -13,10 +13,9 @@ export const Home = () => {
       </header>
       <main>
         <section className="section1 ">
-          <div className="管辖统计 borderd">
-            <h2>案发派出所管辖统计</h2>
-            <Chart1 />
-          </div>
+
+          <Chart1 />
+
         </section>
         <section className="section2  borderd" >222</section>
         <section className="section3  borderd">3</section>
