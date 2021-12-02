@@ -1,24 +1,28 @@
 import React, { useRef, useEffect } from 'react';
 import './home.scss';
+import dayjs from "dayjs";
 import headerBg from "../images/header.png"
 import { Chart1 } from '../components/chart-1';
 import { Chart2 } from '../components/chart-2';
 import { Chart3 } from '../components/chart-3';
+import { Chart4 } from '../components/chart-4';
 export const Home = () => {
-  const year = new Date().getFullYear();
+  const date = new Date().toISOString();
+  let d = dayjs(date).format('YYYY-MM-DD HH:mm')
   return (
     <div className="home" >
       <header className="header" style={{ backgroundImage: `url(${headerBg})` }}>
         <h2>国家公安合成作战平台</h2>
-        <h6>{year}年12月2日 12:22:00</h6>
+        <h6>{d}</h6>
       </header>
       <main>
         <section className="section1 ">
           <Chart1 />
           <Chart2 />
         </section>
-        <section className="section2  bordered" >
+        <section className="section2  " >
           <Chart3 />
+          <Chart4 />
         </section>
         <section className="section3  bordered">3</section>
         <section className="section4  bordered">4</section>

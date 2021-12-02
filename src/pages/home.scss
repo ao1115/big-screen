@@ -31,6 +31,7 @@
             font-size: px(6);
             position: relative;
             left: 96px;
+            margin-top: 4px;
         }
     }
 
@@ -96,6 +97,9 @@
 
         >.section2 {
             grid-area: box2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
         }
 
@@ -115,7 +119,8 @@
 
         .管辖统计,
         .破获排名,
-        .案发趋势 {
+        .案发趋势,
+        .案发时段 {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -165,6 +170,11 @@
                     background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
                 }
             }
+        }
+
+        .案发时段,
+        .案发趋势 {
+            height: px(363);
         }
     }
 }
