@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import * as echarts from 'echarts'
-const px = (n) => n / 2420 * (window as any).pageWidth;
+import { px } from '../shared/px';
 
 export const Chart1 = () => {
     const divRef = useRef(null)
@@ -55,7 +55,7 @@ export const Chart1 = () => {
         });
     }, []);
     return (
-        <div className="管辖统计 borderd">
+        <div className="管辖统计 bordered">
             <h2>案发派出所管辖统计</h2>
             <div className="chart" ref={divRef}>
             </div>
