@@ -8,7 +8,7 @@
   <script>
     const clientWidth = document.documentElement.clientWidth
     const clientHeight = document.documentElement.clientHeight
-    window.pageWidth = clientWidth / clientHeight > (16/9) ? clientHeight * (16/9 ) : clientWidth
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth
     const pageHeight = pageWidth / (16/9)
     //设置1个rem是宽度的1%
     const string = `<style>
@@ -24,7 +24,6 @@
 <body>
 <div id="root"></div>
 <script>
-  root.style.width = pageWidth + 'px'
   root.style.height = pageHeight + 'px'
   root.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
 </script>
