@@ -1,7 +1,23 @@
 @import "../shared/helper";
 
-.x {
-    width: px(367);
-    height: px(315);
-    border: 1px solid red;
+
+.home {
+    .header {
+        height: px(99);
+        background-size: cover; //自动铺满
+
+        >h2 {
+            color: #16afff;
+            text-align: center;
+            font-size: px(24);
+        }
+
+        >span {
+            color: #fff;
+            text-align: center;
+            display: inline-block;
+
+        }
+    }
+
 }
