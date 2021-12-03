@@ -27,7 +27,13 @@ export const Chart11 = () => {
         { value: 0.12, name: '武汉' },
         { value: 0.06, name: '南京' },
     ];
-    let arrayShow = [];
+    let arrayShow = [
+        { value: 0.08, name: '北京' },
+        { value: 0.06, name: '上海' },
+        { value: 0.11, name: '天津' },
+        { value: 0.09, name: '重庆' },
+        { value: 0.12, name: '呼和浩特' },
+    ];
     let index = 0;
     const change = () => {
         if (index >= 6) {
@@ -40,14 +46,12 @@ export const Chart11 = () => {
             }
         }
         index = index + 1
-        console.log(index)
     }
     useEffect(() => {
         setInterval(() => {
             change()
             X(arrayShow)
-            console.log(arrayShow)
-        }, 3000)
+        }, 2000)
     })
     function X(data) {
         var myChart = echarts.init(divRef.current);
@@ -91,6 +95,9 @@ export const Chart11 = () => {
             ]
         });
     }
+    useEffect(() => {
+        X(arrayShow)
+    })
     return (
         <div className="案发地级市  bordered">
             <h2>案发地级市统计</h2>

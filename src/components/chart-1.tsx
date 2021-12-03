@@ -4,7 +4,28 @@ import { px } from '../shared/px';
 
 export const Chart1 = () => {
     const divRef = useRef(null)
-    useEffect(() => {
+    const myChart = useRef(null)
+    let data = [
+        { name: '北京', num: 10 },
+        { name: '上海', num: 20 },
+        { name: '天津', num: 36 },
+        { name: '重庆', num: 24 },
+        { name: '黑龙江', num: 40 },
+        { name: '内蒙古', num: 52 },
+        { name: '吉林', num: 15 },
+        { name: '辽宁', num: 30 },
+    ]
+    let newData = [
+        { name: '广东', num: 30 },
+        { name: '广西', num: 10 },
+        { name: '山东', num: 25 },
+        { name: '河北', num: 45 },
+        { name: '河南', num: 30 },
+        { name: '湖南', num: 43 },
+        { name: '湖北', num: 53 },
+        { name: '新疆', num: 16 },
+    ]
+    function X(data) {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
             textStyle: {
@@ -14,7 +35,7 @@ export const Chart1 = () => {
             title: { show: false },
             legend: { show: false },
             xAxis: {
-                data: ['北京', '上海', '重庆', '天津', '内蒙古', '新疆', '甘肃', '陕西', '山西'],
+                data: data.map(i => i.name),
                 axisTick: { show: false },
                 axisLine: {
                     lineStyle: { color: '#083B70' }
@@ -50,9 +71,20 @@ export const Chart1 = () => {
             },
             series: [{
                 type: 'bar',
-                data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
+                data: data.map(i => i.num),
             }]
         });
+    }
+    useEffect(() => {
+        X(data)
+    }, []);
+    useEffect(() => {
+        setInterval(() => {
+            X(newData)
+        }, 2000)
+        setInterval(() => {
+            X(data)
+        }, 4000)
     }, []);
     return (
         <div className="管辖统计 bordered">

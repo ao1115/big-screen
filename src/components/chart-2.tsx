@@ -100,6 +100,9 @@ export const Chart2 = () => {
         }, 1000)
 
     }, []);
+    useEffect(() => {
+        X(data)
+    })
     return (
         <div className="破获排名 bordered">
             <h2>案件破获排名</h2>
