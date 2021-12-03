@@ -228,7 +228,6 @@
             &-图2,
             &-图3 {
                 flex: 1;
-                border: 1px solid red;
                 display: flex;
                 flex-direction: column;
             }
@@ -244,7 +243,7 @@
 
                     >span {
                         display: inline-block;
-                        width: px(12);
+                        width: px(10);
                         height: px(10);
                         border-radius: px(2);
                         margin: 0 px(10);
@@ -286,6 +285,16 @@
 
                 .legend {
                     justify-content: flex-start;
+                }
+            }
+
+            &-图3 {
+                border: 1px solid #08397d;
+
+                h3 {
+                    font-size: px(20);
+                    color: #7ab6db;
+                    margin-top: px(6);
                 }
             }
         }
