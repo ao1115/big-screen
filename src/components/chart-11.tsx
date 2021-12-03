@@ -17,7 +17,7 @@ export const Chart11 = () => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
             textStyle: {
-                fontSize: px(12),
+                fontSize: px(18),
                 color: '#79839E'
             },
             title: { show: false },

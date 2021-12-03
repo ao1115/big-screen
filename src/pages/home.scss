@@ -19,7 +19,7 @@
             text-align: center;
             font-size: px(42);
             margin: 0 auto;
-            background: linear-gradient(90deg, #b6ddfe 15%, #16adfe 76%);
+            background: linear-gradient(180deg, #b6ddfe 55%, #16adfe 76%);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -224,6 +224,52 @@
         .地图 {
             height: px(753);
             background: transparent;
+
+            >.wrapper {
+                position: relative;
+                width: 100%;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .chart {
+                    flex: 1;
+                }
+
+                .legend {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: px(40);
+                    left: px(20);
+                    display: flex;
+                    align-items: center;
+                    font-size: px(22);
+                    padding: px(20);
+                    border-radius: 0;
+
+                    >.number {
+                        font-size: px(36);
+                        color: #33a4fa;
+                    }
+
+                    >.违法案件总数 {
+                        margin-top: px(10);
+                    }
+                }
+
+                .notes {
+                    position: absolute;
+                    bottom: px(10);
+                    right: px(10);
+                }
+            }
+
+            >.notes {
+                position: absolute;
+                bottom: px(10);
+                right: px(10);
+            }
         }
 
         .年龄段 {

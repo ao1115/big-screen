@@ -69,9 +69,14 @@ export const Chart6 = () => {
     return (
         <div className="地图 bordered">
             <h2>犯罪人员籍贯分布地</h2>
-            <div className="chart" ref={divRef}>
+            <div className="wrapper">
+                <div ref={divRef} className="chart" />
+                <div className="legend bordered">
+                    <span className="number">2876</span>
+                    <span className="违法案件总数">违法案件总数</span>
+                </div>
+                <div className="notes">此地图仅显示了中国的部分区域</div>
             </div>
-            <div>此地图仅显示了中国的部分区域</div>
         </div>
     )
 }
