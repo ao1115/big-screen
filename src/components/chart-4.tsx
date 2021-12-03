@@ -17,7 +17,7 @@ export const Chart4 = () => {
         setInterval(() => {
             const newData = [Math.random() / 10, 0.08, Math.random() / 10, 0.12, 0.14, Math.random() / 10, Math.random() / 10, 0.12, 0.10, Math.random() / 10, 0.10, 0.06, Math.random() / 10]
             x(newData)
-        }, 3000)
+        }, 2000)
     })
     function x(data) {
         var myChart = echarts.init(divRef.current);
