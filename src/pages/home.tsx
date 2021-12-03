@@ -13,6 +13,7 @@ import { Chart8 } from '../components/chart-8';
 import { Chart9 } from '../components/chart-9';
 import { Chart10 } from '../components/chart-10';
 import { Chart11 } from '../components/chart-11';
+import { Chart12 } from '../components/chart-12';
 export const Home = () => {
   const date = new Date().toISOString();
   let d = dayjs(date).format('YYYY-MM-DD HH:mm')
@@ -48,6 +49,7 @@ export const Home = () => {
         <section className="section5 ">
           <Chart10 />
           <Chart11 />
+          <Chart12 />
         </section>
       </main>
       <footer>
