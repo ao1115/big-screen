@@ -69,7 +69,7 @@
             background: #0f113a;
 
             &::before {
-                pointer-events: none;
+                pointer-events: none; //鼠标不会选中这个
                 content: '';
                 position: absolute;
                 left: 0;
@@ -198,6 +198,7 @@
                 table-layout: fixed;
                 margin-top: px(25);
                 border-spacing: 0;
+                font-size: px(12);
 
                 th,
                 td {
