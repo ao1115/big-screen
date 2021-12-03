@@ -4,7 +4,22 @@ import { px } from '../shared/px';
 
 export const Chart4 = () => {
     const divRef = useRef(null)
+    const myChart = useRef(null);
+    const data = [
+        0.15, 0.13, 0.11,
+        0.13, 0.14, 0.15,
+        0.16, 0.18, 0.21,
+        0.19, 0.17, 0.16,
+        0.15
+    ]
+
     useEffect(() => {
+        setInterval(() => {
+            const newData = [Math.random() / 10, 0.08, Math.random() / 10, 0.12, 0.14, Math.random() / 10, Math.random() / 10, 0.12, 0.10, Math.random() / 10, 0.10, 0.06, Math.random() / 10]
+            x(newData)
+        }, 3000)
+    })
+    function x(data) {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
             textStyle: {
@@ -52,13 +67,7 @@ export const Chart4 = () => {
             series: [{
                 name: '故意伤人',
                 type: 'line',
-                data: [
-                    0.15, 0.13, 0.11,
-                    0.13, 0.14, 0.15,
-                    0.16, 0.18, 0.21,
-                    0.19, 0.17, 0.16,
-                    0.15
-                ],
+                data: data,
                 symbol: 'circle',
                 symbolSize: px(12),
                 lineStyle: { width: px(2) },
@@ -73,6 +82,10 @@ export const Chart4 = () => {
                 }
             }]
         });
+    }
+    useEffect(() => {
+        myChart.current = echarts.init(divRef.current);
+        x(data);
     }, []);
     return (
         <div className="案发时段 bordered">

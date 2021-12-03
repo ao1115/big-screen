@@ -12,9 +12,39 @@ export const Chart11 = () => {
         { value: 0.09, name: '重庆' },
         { value: 0.12, name: '呼和浩特' },
         { value: 0.06, name: '乌鲁木齐' },
+        { value: 0.08, name: '北京' },
+        { value: 0.06, name: '上海' },
+        { value: 0.11, name: '天津' },
+        { value: 0.09, name: '重庆' },
+        { value: 0.12, name: '呼和浩特' },
+        { value: 0.06, name: '乌鲁木齐' },
     ];
+    // let arrayShow = [
+    //     { value: 0.08, name: '北京' },
+    //     { value: 0.06, name: '上海' },
+    //     { value: 0.11, name: '天津' },
+    //     { value: 0.09, name: '重庆' },
+    //     { value: 0.12, name: '呼和浩特' },
+    // ];
+    // let index = 0;
+    // const change = () => {
+    //     if (index >= 6) {
+    //         index = 0
+    //     }
+    //     for (let i = 0; i < data.length; i++) {
+    //         arrayShow = data.slice(index + 5, index + 10)
+
+    //     }
+    //     index = index + 1
+    //     console.log(index)
+    // }
+
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
+        // setInterval(() => {
+        //     change()
+        //     console.log(arrayShow)
+        // }, 1000)
         myChart.setOption({
             textStyle: {
                 fontSize: px(18),
@@ -63,4 +93,8 @@ export const Chart11 = () => {
         </div>
     )
 
+}
+
+function changeDate() {
+    throw new Error('Function not implemented.');
 }
