@@ -11,6 +11,7 @@ import { Chart6 } from '../components/chart-6';
 import { Chart7 } from '../components/chart-7';
 import { Chart8 } from '../components/chart-8';
 import { Chart9 } from '../components/chart-9';
+import { Chart10 } from '../components/chart-10';
 export const Home = () => {
   const date = new Date().toISOString();
   let d = dayjs(date).format('YYYY-MM-DD HH:mm')
@@ -43,7 +44,9 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="section5  bordered">5</section>
+        <section className="section5  bordered">
+          <Chart10 />
+        </section>
       </main>
       <footer>
         &copy; 敖秀芳 2020-2021
